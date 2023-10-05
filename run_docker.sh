@@ -12,5 +12,5 @@ docker run --rm --privileged --init -it \
 	-e DISPLAY=$DISPLAY \
 	-v /tmp/.X11-unix:/tmp/.X11-unix \
 	-v /dev/bus/usb:/dev/bus/usb \
-	-v "${HOME}":${HOME}/ \
-	rust_tenma:0.1
+	-v "$(dirname $(realpath "$0"))":${HOME}/git_repos \
+	rust_tenma:0.2
